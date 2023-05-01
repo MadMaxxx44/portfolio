@@ -1,0 +1,174 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; 
+}
+
+ul {
+  list-style: none;
+}
+
+/* KEYFRAMES*/
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fade-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+  }
+  
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* BASE STYLES */
+body {
+  background-color: black;
+  color: white; 
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none; 
+}
+
+.color {
+  height: 1000px;
+  width: 1000px;
+  background-image: radial-gradient(closest-side, rgba(69, 0, 230, 0.21), black);
+  position: absolute;
+  top: -570px;
+  left: 25%; 
+  z-index: -1;
+}
+
+/* HEADER */
+.header {
+  display: flex; 
+  align-items: center;
+  justify-content: space-between;
+  padding: 42px 62px; 
+  position: fixed; 
+  width: 100%;
+}
+
+.logo {
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover; 
+  animation: fade-down 0.5s 0.4s backwards;
+}
+
+/* MAIN */
+.main {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 90px;
+  padding: 0 25px; 
+  animation: fade-up 0.5s 0.4s backwards;
+}
+
+/* INTRO */
+.intro {
+  padding-top: 125px;
+}
+
+.first-heading {
+  font-size: 48px;
+  font-weight: 600;
+  opacity: 0.94; 
+}
+
+.intro-text {
+  font-size: 40px;
+  opacity: 0.9; 
+  font-weight: 300;
+  margin-top: 11px;
+  line-height: 1.1;
+}
+
+.u-flag {
+  background: linear-gradient(to bottom, blue 60%, yellow 40%);
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+  background-clip: none;
+}
+
+.icon {
+  height: 30px;
+  border: 2px solid white; 
+  background-color: white;
+  margin-right: 25px;
+  margin-top: 20px;
+  opacity: 0.94;
+}
+
+.icon:hover {
+  background-color: grey;
+  border-color: grey;
+  cursor: pointer; 
+}
+
+/* RESUME */
+.resume {
+  margin-top: 125px;
+  opacity: 0.95;
+}
+
+.resume-heading {
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.link {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.text {
+  font-size: 20px;
+  text-align: left;
+}
+
+.exp-headers {
+  color:rgb(92, 43, 226); 
+  font-weight: 1000;
+}
+
+.skills-ul {
+  text-align: left;
+  font-size: 19px;
+}
+
+.skills-ul li:nth-child(even) {
+  text-align: right;
+}
+
+.skills-ul li:nth-child(odd) {
+  text-align: left;
+}
+
+.text .date {
+  display: flex; 
+}
